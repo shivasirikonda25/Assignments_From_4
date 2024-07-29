@@ -45,4 +45,13 @@ public class PolicyManagement
         this.coverage_amount = coverage_amount;
     }
 
+    @Override
+    public String toString() {
+        return "PolicyManagement{" +
+                "policy_number=" + policy_number +
+                ", policy_Holdername='" + policy_Holdername + '\'' +
+                ", insurance_type='" + insurance_type + '\'' +
+                ", coverage_amount=" + coverage_amount +
+                '}';
+    }
 }

@@ -94,8 +94,26 @@ public class Operations
                System.out.println("updated........");
            }
            else break;
-
        }
+       HashMap<String,List<PolicyManagement>>map=new HashMap<>();
+       for(int i=0;i<l.size();i++)
+       {
+           if(!map.containsKey(l.get(i)))
+           {
+               map.put(l.get(i).getInsurance_type(),new ArrayList<>());
+           }
+           List<PolicyManagement>temp=map.get(l.get(i).getInsurance_type());
+           temp.add(l.get(i));
+           map.put(l.get(i).getInsurance_type(),temp);
+       }
+       for(Map.Entry<String,List<PolicyManagement>> m: map.entrySet())
+       {
+           List<PolicyManagement>temp=m.getValue();
+           System.out.println("the policy holder of type "+m.getKey());
+           for(int i=0;i<temp.size();i++)
+               System.out.println(temp.get(i));
+       }
+
     }
 
 }
