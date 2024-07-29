@@ -1,13 +1,13 @@
 public class PolicyManagement
 {
     private int policy_number;
-    private String policy_name;
+    private String policy_Holdername;
     private String insurance_type;
     private int coverage_amount;
-   public PolicyManagement(int policy_number,String policy_name,String insurance_type,int coverage_amount)
+   public PolicyManagement(int policy_number,String policy_Holdername,String insurance_type,int coverage_amount)
    {
        this.policy_number=policy_number;
-       this.policy_name=policy_name;
+       this.policy_Holdername=policy_Holdername;
        this.insurance_type=insurance_type;
        this.coverage_amount=coverage_amount;
    }
@@ -20,12 +20,12 @@ public class PolicyManagement
         this.policy_number = policy_number;
     }
 
-    public String getPolicy_name() {
-        return policy_name;
+    public String getPolicy_Holdername() {
+        return policy_Holdername;
     }
 
-    public void setPolicy_name(String policy_name) {
-        this.policy_name = policy_name;
+    public void setPolicy_Holdername(String policy_name) {
+        this.policy_Holdername = policy_Holdername;
     }
 
     public String getInsurance_type() {
@@ -44,8 +44,5 @@ public class PolicyManagement
     {
         this.coverage_amount = coverage_amount;
     }
-    public static void main(String[] args)
-    {
 
-    }
 }
