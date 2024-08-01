@@ -6,18 +6,17 @@ public class Sort_Person
     {
         List<Person>l=new ArrayList<>();
         Scanner sc=new Scanner(System.in);
-        while(true)
-        {
+        while(true) {
             System.out.println("enter -1 to exit ");
-            int t=sc.nextInt();
-            if(t==-1) break;
+            int t = sc.nextInt();
+            if (t == -1) break;
             System.out.println("enter the name of the person :");
-            String name=sc.next();
+            String name = sc.next();
             System.out.println("enter the age of the person");
-            int age=sc.nextInt();
+            int age = sc.nextInt();
             System.out.println("enter the salary of the person");
-            long salary=sc.nextLong();
-            Person p=new Person(name,age,salary);
+            long salary = sc.nextLong();
+            Person p = new Person(name, age, salary);
             l.add(p);
         }
         Collections.sort(l,(p1,p2)->{
