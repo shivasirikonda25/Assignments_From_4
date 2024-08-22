@@ -3,9 +3,10 @@ package com.sirikonda.spring_boot_22.service;
 import com.sirikonda.spring_boot_22.model.Employee;
 import com.sirikonda.spring_boot_22.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class EmployeeServiceImpl implements EmployeeService
 {
 @Autowired
@@ -36,7 +37,11 @@ EmployeeRepository resp;
        e.setFirstname(emp.getFirstname());
        e.setLastname(emp.getLastname());
        return resp.save(e);
+    }
 
+    @Override
+    public void deleteById(long id) {
+        resp.deleteById(id);
     }
 
 }
